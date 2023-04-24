@@ -1,0 +1,94 @@
+.TutorialOverlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 100%;
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  z-index: 2;
+}
+
+.HighlightedElement {
+  border: 3px solid red;
+  position: absolute;
+  z-index: 3;
+  pointer-events: none;
+  box-sizing: content-box;
+}
+
+.InfoBox {
+  position: absolute;
+  width: clamp(320px, 50%, 400px);
+  min-height: 120px;
+  top: 100px;
+  z-index: 10;
+  background-color: white;
+  border-radius: 6px;
+  box-shadow: 1px 1px 5px 0px var(--tutorial-primary);
+
+  @media screen and (max-width: 500px) {
+    left: 50% !important;
+    transform: translate(-50%);
+  }
+
+  .InfoTitle {
+    padding: 1rem calc(56px + 2rem) 0 1rem;
+    text-overflow: ellipsis;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    span {
+      color: var(--tutorial-primary);
+      font-size: 1.2rem;
+      font-weight: 500;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    Button {
+      position: absolute;
+      right: 1rem;
+    }
+  }
+
+  .InfoContent {
+    padding: 1rem;
+    height: calc(200px - (3rem + 75px));
+    margin-top: 5px;
+    overflow-y: scroll;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    p {
+      margin: 0;
+    }
+  }
+
+  .InfoSteps {
+    padding-left: 1rem;
+  }
+
+  .BoxFooter {
+    position: absolute;
+    bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 28px;
+    width: 100%;
+
+    .ButtonWrapper {
+      padding-right: 1rem;
+
+      Button:first-child {
+        margin-right: 1rem;
+      }
+    }
+  }
+}

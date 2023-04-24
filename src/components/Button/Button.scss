@@ -1,0 +1,44 @@
+.TutorialButton {
+  display: inline-block;
+  padding: 0.5rem 1.5rem;
+  background: var(--tutorial-light);
+  color: var(--tutorial-primary);
+  border: 2px solid var(--tutorial-primary);
+  text-decoration: none !important;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 1rem;
+  line-height: 1rem;
+  border-radius: 0.5rem 0;
+  transition: 0.4s cubic-bezier(0.77, 0, 0.175, 1);
+  font-weight: 700;
+  cursor: pointer;
+
+  &:hover {
+    background: var(--tutorial-primary);
+    color: var(--tutorial-light);
+    opacity: 0.5;
+  }
+
+  &.small {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.75rem;
+  }
+
+  &.disabled {
+    color: var(--tutorial-grayout);
+    border: 2px solid var(--tutorial-grayout);
+    background-color: var(--tutorial-light);
+    pointer-events: none;
+    opacity: 1;
+  }
+
+  &.full {
+    background: var(--tutorial-primary);
+    color: var(--tutorial-light);
+
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+}

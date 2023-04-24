@@ -1,0 +1,10 @@
+:root {
+  --tutorial-primary: blue;
+  --tutorial-grayout: lightgray;
+  --tutorial-light: white;
+}
+
+.foreground {
+  z-index: 3;
+  position: relative;
+}
