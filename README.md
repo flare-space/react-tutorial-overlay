@@ -181,3 +181,7 @@ export {
 } from "./dts/components/TutorialOverlay";
 
 ```
+
+## License
+
+See [LICENSE](./LICENSE) for more information.
